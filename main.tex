@@ -1,0 +1,47 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usepackage{fontspec}
+
+\setmainfont{TakaoPMincho}
+\newfontfamily{\romaji}{TSCu_Times}
+
+\def\RomaJi#1{\romaji{\fontsize{5}{5}\selectfont #1}}
+\def\Kana#1{\fontsize{37}{37}\selectfont\color{gray!20} #1}
+\begin{document}
+\begin{tikzpicture}[scale=2,yscale=-1]
+\foreach \i/\j/\k in {あ/a/1, い/i/2, う/u/3, え/e/4, お/o/5}
+  {\node at (0,\k) {\Kana{\i}};
+  \node at (0-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {か/ka/1, き/ki/2, く/ku/3, け/ke/4, こ/ko/5}
+  {\node at (1,\k) {\Kana{\i}};
+  \node at (1-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {さ/sa/1, し/shi/2, す/su/3, せ/se/4, そ/so/5}
+  {\node at (2,\k) {\Kana{\i}};
+  \node at (2-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {た/ta/1, ち/chi/2, つ/tsu/3, て/te/4, と/to/5}
+  {\node at (3,\k) {\Kana{\i}};
+  \node at (3-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {な/na/1, に/ni/2, ぬ/nu/3, ね/ne/4, の/no/5}
+  {\node at (4,\k) {\Kana{\i}};
+  \node at (4-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {は/ha/1, ひ/hi/2, ふ/fu/3, へ/he/4, ほ/ho/5}
+  {\node at (5,\k) {\Kana{\i}};
+  \node at (5-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {ま/ma/1, み/mi/2, む/mu/3, め/me/4, も/mo/5}
+  {\node at (6,\k) {\Kana{\i}};
+  \node at (6-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {や/ya/1, //2, ゆ/yu/3, //4, よ/yo/5}
+  {\node at (7,\k) {\Kana{\i}};
+  \node at (7-.25,\k-.25) {\RomaJi{\j}};}
+  \foreach \i/\j/\k in {ら/ra/1, り/ri/2, る/ru/3, れ/re/4, ろ/ro/5}
+  {\node at (8,\k) {\Kana{\i}};
+  \node at (8-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {わ/wa/1, //2, を/wo/3, //4, //5}
+  {\node at (9,\k) {\Kana{\i}};
+  \node at (9-.25,\k-.25) {\RomaJi{\j}};}
+\foreach \i/\j/\k in {//1, //2, //3, //4, ん/n/5}
+  {\node at (10,\k) {\Kana{\i}};
+  \node at (10-.25,\k-.25) {\RomaJi{\j}};}
+\end{tikzpicture}
+\end{document}
